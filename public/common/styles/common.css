@@ -267,9 +267,6 @@ footer {
           top: 0;
      }
      .btn-text {
-
-
-          
           width: 33%;
           margin-bottom: 10px;
           font-size: 11px;
@@ -311,6 +308,8 @@ footer {
 .bi {
      margin-right: 5px;
 }
+
+/*로그인 폼*/
 .loginform label {
      display: block;
      margin: 20px 0 10px 0;
@@ -320,18 +319,30 @@ footer {
 }
 .form-control {
      height: 40px;
+     color: #676767;
+     font-size: 14px;
+}
+.form-control::placeholder {
+     color: #ddd;
+}
+.btnwrap {
+     margin-top: 30px;
+}
+.btn {
      display: block;
      width: 100%;
      height: 40px;
-     line-height:  38px;
+     line-height: 38px;
      border-radius: 5px;
      font-size: 18px;
      text-align: center;
 }
 .btn-login {
-     background: #b31f28;
+     background: #17a2b8;
      color: #fff;
 }
+
+/*회원가입 대화상자*/
 .form-group .d-block {
      margin-bottom: 10px;
      font-size: 16px;
@@ -340,7 +351,7 @@ footer {
      padding-right: 80px;
      position: relative;
 }
-.form-group:nth-of-type(1) input+button {
+.form-group:nth-of-type(1) input + button { /*중복확인버튼*/
      width: 75px;
      height: 40px;
      border: solid 1px #ddd;
@@ -373,7 +384,7 @@ footer {
 }
 .form-group .custom-control {
      display: inline-block;
-     margin: 0 15px 0  20px;
+     margin: 0 15px 0 20px;
 }
 .btnwrap.half {
      display: flex;
@@ -385,4 +396,33 @@ footer {
 }
 .btnwrap.half .btn {
      flex-basis: 49%;
+}
+
+/*##메인콘텐츠레이아웃##*/
+/* 09-1 메인배너*/
+.mainbanner {
+     height: 350px;
+     overflow: hidden;
+     text-align: center;
+}
+.mainbanner > img {
+     height: 350px;
+}
+.newbook {
+     background: url("/images/content_bg.png") repeat-x;
+     padding: 40px 0;
+}
+.maintit {
+     margin-bottom: 20px;
+     font-size: 38px;
+     color: #222;
+     font-weight: 900;
+     text-align: center;
+}
+.maintit > span {
+     display: block;
+     margin-top: 10px;
+     font-size: 18px;
+     color: #ababab;
+}
 }
