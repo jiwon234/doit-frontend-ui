@@ -425,4 +425,100 @@ footer {
      font-size: 18px;
      color: #ababab;
 }
+/* 09-2 캐러셀 구현*/
+.tapcontent {
+     max-width: 1200px;
+     margin: 0 auto;
+}
+.tap {
+     margin: 40px 100px;
+     display: flex;
+     text-align: center;
+     justify-content: space-evenly; /*상하 공백이 동일하게 주어짐*/
+}
+.btn-tap {
+     display: inline-block; /*inline요소 처럼 한 줄에 배치됨*/
+     height: 40px;
+     line-height: 40px;
+     font-size: 18px;
+     color: #888;
+     font-weight: 700;
+     position: relative;
+}
+
+.btn-tap::after {
+     content: "";
+     display: block;
+     width: 0;
+     height: 2px;
+     background: #222;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+}
+.btn-tap.active {
+     color: #222;
+}
+.btn-tap.active::after {
+     width: 100%;
+}
+/*캐러셀 꾸미기*/
+.mainslider {
+     margin: 0 100px;
+     position: relative;
+}
+.slick-arrow {
+     width: 42px;
+     height: 42px;
+     background: url("/images/arrow-icon.png") no-repeat 0 0/100%;
+     font-size: 0;
+     position: absolute;
+     top: 50%;
+     margin-top: -55px;
+     z-index: 9;
+}
+.slick-arrow.click-prev {
+     left: 10px;
+}
+.slick-arrow.slick-next {
+     right: 10px;
+     transform: rotate(180deg);
+}
+.rollimg {
+     padding: 0 10px;
+}
+.imgbox > img {
+     max-width: 100%;
+}
+.rollimg > strong {
+     display: block;
+     font-size: 15px;
+     color: #666;
+}
+.textbox {
+     font-size: 13px;
+     color: #ababab;
+}
+@media screen and (max-width: 767px) {
+     .tapcontent {
+          padding: 0 10px;
+     }
+     .maintit {
+          font-size: 26px;
+     }
+     .maintit > span {
+          font-size: 14px;
+          margin-top: 0px;
+     }
+     .tap {
+          margin: 20px 0;
+     }
+     .btn-tap {
+          height: 20px;
+          line-height: 20px;
+          font-size: 14px;
+     }
+     .mainslider {
+          margin: 0;
+     }
 }
